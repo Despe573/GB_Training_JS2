@@ -19,7 +19,12 @@ class ProductsList {
     }
 
     fetchProducts() {
-        const url = 'http://localhost:1313/database/data.json';
+        try {
+            const url = 'http://localhost:1313/database/data.json';
+        } catch (err) {
+            const url = 'https://gb-js2-lesson3-gobnfnstg6vq5ct.herokuapp.com/database/data.json'
+        }
+
         return fetch(url);
     }
 
