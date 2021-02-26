@@ -4,21 +4,23 @@ class ProductsList {
     _items = [];
 
     constructor(cartInstane) {
-        let products = this.fetchProducts();
-        products = products.map(item => {
-            return new ProductItem(item, cartInstane)
-        });
-        this._items = products;
-        this.render();
+        this.fetchProducts()
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                const products = data.data.map(item => {
+                    return new ProductItem(item, cartInstane)
+                })
+
+                this._items = products;
+                this.render();
+            })
     }
 
     fetchProducts() {
-        return [
-            { name: 'Shirt', price: 150, img: 'https://picsum.photos/250/250?random=1' },
-            { name: 'Socks', price: 50, img: 'https://picsum.photos/250/250?random=2' },
-            { name: 'Jacket', price: 350, img: 'https://picsum.photos/250/250?random=3' },
-            { name: 'Shoes', price: 250, img: 'https://picsum.photos/250/250?random=4' },
-        ]
+        const url = 'http://localhost:1313/database/data.json';
+        return fetch(url);
     }
 
     render() {
