@@ -5,9 +5,9 @@ const server = http.createServer(function (req, res) {
     let body = null;
 
     try {
-        body = fs.readFileSync(`./site/${req.url}`);
+        body = fs.readFileSync(`./shop/${req.url}`);
     } catch (err) {
-        body = fs.readFileSync('./site/index.html');
+        body = fs.readFileSync('./shop/index.html');
     }
 
     res.end(body);
