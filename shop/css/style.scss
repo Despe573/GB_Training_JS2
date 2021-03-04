@@ -42,13 +42,31 @@ header {
 }
 
 .content {
-    min-width            : 1300px;
-    margin               : 0 auto;
-    min-height           : calc(100vh - 140px);
-    padding              : 24px;
-    display              : block;
-    /* display           : grid; */
-    grid-template-columns: 2fr 1fr;
+    min-width      : 1300px;
+    margin         : 0 auto;
+    min-height     : calc(100vh - 140px);
+    padding        : 24px;
+    display        : flex;
+    justify-content: center;
+}
+
+.form {
+    box-shadow: 0 0 45px #dfdfdf;
+    min-width : 450px;
+
+}
+
+form {
+    display       : flex;
+    flex-direction: column;
+    padding       : 24px;
+}
+
+input,
+textarea {
+    font-size : 20px;
+    margin-top: 8px;
+    padding   : 4px 8px;
 }
 
 .card {

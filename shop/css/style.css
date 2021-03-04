@@ -51,10 +51,36 @@ header .link:hover {
   margin: 0 auto;
   min-height: calc(100vh - 140px);
   padding: 24px;
-  display: block;
-  /* display           : grid; */
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form {
+  -webkit-box-shadow: 0 0 45px #dfdfdf;
+          box-shadow: 0 0 45px #dfdfdf;
+  min-width: 450px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 24px;
+}
+
+input,
+textarea {
+  font-size: 20px;
+  margin-top: 8px;
+  padding: 4px 8px;
 }
 
 .card {
