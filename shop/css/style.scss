@@ -50,6 +50,13 @@ header {
     justify-content: center;
 }
 
+.error {
+    font-size : 16px;
+    color     : red;
+    font-style: italic;
+    align-self: flex-end;
+}
+
 .form {
     box-shadow: 0 0 45px #dfdfdf;
     min-width : 450px;
