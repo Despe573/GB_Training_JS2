@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/Despe573/GB_Training_JS2/issues"
   },
-  "homepage": "https://github.com/Despe573/GB_Training_JS2#readme"
+  "homepage": "https://github.com/Despe573/GB_Training_JS2#readme",
+  "dependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0"
+  }
 }
