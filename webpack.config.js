@@ -1,10 +1,13 @@
 const path = require('path')
 
 module.exports = {
-    entry: './shop/src/shop.js',
+    entry: {
+        shop: './shop/src/js/shop.js',
+        form: './shop/src/js/form.js',
+    },
     output: {
-        path: path.resolve(__dirname, 'shop/js'),
-        filename: 'shop.js'
+        path: path.resolve(__dirname, 'shop/public'),
+        filename: '[name].js',
     },
     module: {
         rules: [
@@ -12,6 +15,15 @@ module.exports = {
                 test: /\.js$/,
                 use: [
                     { loader: 'babel-loader' },
+                ],
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    { loader: 'sass-loader' },
+
                 ],
             },
         ]
