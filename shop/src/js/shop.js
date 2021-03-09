@@ -22,10 +22,10 @@ class ProductsList {
 
     fetchProducts() {
         try {
-            const url = 'http://localhost:1313/src/database/data1.json';
+            const url = './src/database/data1.json';
             return fetch(url)
         } catch (err) {
-            const url = 'https://gb-js2-lesson3-gobnfnstg6vq5ct.herokuapp.com/database/data.json'
+            const url = 'http://localhost:8080/src/database/data1.json'
             return fetch(url)
         }
     }
