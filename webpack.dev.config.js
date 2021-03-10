@@ -3,10 +3,13 @@ const base = require('./webpack.config')
 
 module.exports = merge(base, {
     devServer: {
-        contentBase: './shop',
-        publicPath: './public',
+        contentBase: './shop/src/public',
+        publicPath: './shop/src',
         host: 'localhost',
-        port: 8080,
+        port: 9000,
         hot: true,
     },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+    ],
 })

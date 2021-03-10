@@ -1,3 +1,6 @@
+import ProductItem from './ProductItem';
+
+
 export default class ProductsList {
     _items = [];
 
@@ -32,3 +35,6 @@ export default class ProductsList {
         })
     }
 };
+
+
+

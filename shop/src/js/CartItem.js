@@ -1,4 +1,7 @@
-export class CartItem extends ProductItem {
+import ProductItem from './ProductItem';
+import Button from './Button';
+
+export default class CartItem extends ProductItem {
 
     constructor(item, cartInstane) {
         super(item, cartInstane);

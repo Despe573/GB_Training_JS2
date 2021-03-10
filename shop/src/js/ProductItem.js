@@ -1,3 +1,5 @@
+import Button from './Button';
+
 export default class ProductItem {
     _name = '';
     _price = 0;

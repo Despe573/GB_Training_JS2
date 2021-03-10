@@ -1,3 +1,6 @@
+
+import CartItem from './CartItem';
+
 export default class Cart {
     _item = {};
     _cartInstane = null;
