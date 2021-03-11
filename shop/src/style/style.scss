@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+* {
+    margin            : 0;
+    padding           : 0;
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+}
+
+body {
+    background-color  : #f7f7f7;
+    font-family       : 'Roboto', sans-serif;
+    color             : #242424;
+    font-size         : 24px;
+    font-weight       : 100;
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+}
+
+header {
+    min-width       : 1300px;
+    border-bottom   : 1px solid #b5b7ba;
+    background-color: #dfdfdf;
+    height          : 50px;
+    align-items     : center;
+    display         : flex;
+    justify-content : center;
+
+    .link {
+        color          : #4d4d4d;
+        font-size      : 24px;
+        font-weight    : 100;
+        text-decoration: none;
+        height         : 30px;
+        line-height    : 30px;
+        display        : inline-block;
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+}
+
+.content {
+    min-width            : 1300px;
+    margin               : 0 auto;
+    min-height           : calc(100vh - 140px);
+    padding              : 24px;
+    display              : block;
+    grid-template-columns: 2fr 1fr;
+}
+
+.center {
+    display        : flex;
+    justify-content: center;
+}
+
+.error {
+    font-size : 16px;
+    color     : red;
+    font-style: italic;
+    align-self: flex-end;
+}
+
+.form {
+    box-shadow: 0 0 45px #dfdfdf;
+    min-width : 450px;
+
+}
+
+form {
+    display       : flex;
+    flex-direction: column;
+    padding       : 24px;
+}
+
+input,
+textarea {
+    font-size : 20px;
+    margin-top: 8px;
+    padding   : 4px 8px;
+}
+
+.card {
+    margin    : 0 auto;
+    border    : 1px solid black;
+    padding   : 16px;
+    text-align: center;
+
+    img {
+        padding-bottom: 16px;
+    }
+}
+
+.cardButton {
+    font-family: 'Roboto', sans-serif;
+    color      : #242424;
+    font-size  : 18px;
+    font-weight: 100;
+    padding    : 4px 8px;
+    margin-top : 32px;
+}
+
+.cardsWrap {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 450px));
+    grid-gap             : 12px;
+    grid-auto-rows       : max-content;
+}
+
+
+.basketWrap {
+    display              : none;
+    /*display            : grid;*/
+    grid-gap             : 12px;
+    grid-auto-rows       : max-content;
+    text-align           : center;
+}
+
+.result {
+    margin       : 0 auto;
+    // border    : 1px solid #b5b7ba;
+    padding      : 16px;
+    text-align   : center;
+    font-size    : 20px;
+    font-size    : 20px;
+    width        : 284px;
+    box-shadow   : 0 0 45px #dfdfdf;
+}
+
+.qty {
+    padding-top   : 32px;
+    padding-bottom: 8px
+}
+
+.grid {
+    display: grid;
+}
+
+footer {
+    background-color: #434445;
+    width           : 100%;
+    height          : 90px;
+    color           : #a4a4a4;
+    font-size       : 20px;
+    font-weight     : 100;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
