@@ -1,13 +1,19 @@
-const path = require('path')
+const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin-webpack5');
 
 module.exports = {
     entry: {
-        shop: './shop/src/js/shop.js',
-        form: './shop/src/js/form.js',
+        shop: './shop/src/js/main.js',
+        // form: './shop/src/js/form.js',
     },
     output: {
         path: path.resolve(__dirname, 'shop/public'),
         filename: '[name].js',
+    },
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js',
+        },
     },
     module: {
         rules: [
@@ -21,12 +27,39 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     { loader: 'style-loader' },
-                    { loader: 'css-loader' },
-                    { loader: 'sass-loader' },
-
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            module: true,
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                    },
+                ],
+            },
+            {
+                test: /\.vue$/,
+                use: [
+                    {
+                        loader: 'vue-loader',
+                    },
                 ],
             },
         ]
-    }
+    },
+    devServer: {
+        historyApiFallback: true,
+        contentBase: path.join(__dirname, 'shop/public'),
+        publicPath: path.join(__dirname, 'shop/src'),
+        host: 'localhost',
+        open: true,
+        compress: true,
+        hot: true,
+        port: 8080,
+    },
+    plugins: [
+        new VueLoaderPlugin(),
+    ]
 }
 
