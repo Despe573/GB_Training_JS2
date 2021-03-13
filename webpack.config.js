@@ -24,18 +24,21 @@ module.exports = {
                 ],
             },
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.сss$/i,
                 use: [
                     { loader: 'style-loader' },
                     {
                         loader: 'css-loader',
                         options: {
-                            module: true,
+                            modules: true,
                         }
                     },
-                    {
-                        loader: 'sass-loader',
-                    },
+                ],
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    { loader: 'sass-loader' },
                 ],
             },
             {
