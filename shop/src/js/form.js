@@ -1,7 +1,5 @@
 'use strict';
 
-import '../style/style.scss'
-
 class Form {
     _validName = /^\D+/;
     _validTel = /(^((8|\+7)[\-]?)?\(?\d{3}\)?[\-]?)?[\d\-]{6}\d$/;
