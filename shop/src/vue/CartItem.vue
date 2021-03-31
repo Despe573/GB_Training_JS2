@@ -4,7 +4,7 @@
     <br />
     {{ getItemData.name }} - {{ getItemData.price }}
     <br />
-    <Button @clicked="add">Добавить в корзину</Button>
+    <Button @clicked="del">Удалить из корзины</Button>
   </div>
 </template>
 
@@ -20,13 +20,12 @@ export default {
     id: String,
   },
   methods: {
-    ...mapActions(["addToCart"]),
+    ...mapActions(["delToCart"]),
 
-    add() {
-      this.addToCart(this.id);
+    del() {
+      this.delToCart(this.id);
     },
   },
-
   computed: {
     ...mapGetters(["getData"]),
 

@@ -51,7 +51,8 @@ header .link:hover {
   margin: 0 auto;
   min-height: calc(100vh - 140px);
   padding: 24px;
-  display: block;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
 }
@@ -115,9 +116,9 @@ textarea {
   font-weight: 100;
   padding: 4px 8px;
   margin-top: 32px;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-column-end: 4;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .cardsWrap {
@@ -131,8 +132,8 @@ textarea {
 }
 
 .basketWrap {
-  display: none;
-  /*display            : grid;*/
+  display: -ms-grid;
+  display: grid;
   grid-gap: 12px;
   grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;

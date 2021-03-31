@@ -6,16 +6,28 @@ export default new Vuex.Store({
     state: {
         data: {},
         itemsOnPage: [],
+        itemsOnCart: [],
     },
     mutations: {
         setData(state, payload) {
             state.data = { ...state.data, ...payload.newData };
             state.itemsOnPage.push(...Object.keys(payload.newData));
-        }
+        },
+
+        addItemsToCart(state, payload) {
+            state.itemsOnCart.push(payload);
+        },
+
+        delItemsToCart(state, payload) {
+            state.itemsOnCart = state.itemsOnCart.filter(function (value) {
+                return value != payload
+            });
+        },
     },
     getters: {
         getData: state => state.data,
         getItemsOnPage: state => state.itemsOnPage,
+        getItemsOnCart: state => state.itemsOnCart,
     },
     actions: {
         requestData({ commit }, page) {
@@ -26,6 +38,14 @@ export default new Vuex.Store({
                 .then(res => {
                     commit('setData', { newData: res });
                 });
-        }
+        },
+
+        addToCart({ commit }, data) {
+            commit('addItemsToCart', data);
+        },
+
+        delToCart({ commit }, data) {
+            commit('delItemsToCart', data);
+        },
     },
 });

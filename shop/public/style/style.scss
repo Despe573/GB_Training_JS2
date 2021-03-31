@@ -42,12 +42,13 @@ header {
 }
 
 .content {
-    min-width            : 1300px;
-    margin               : 0 auto;
-    min-height           : calc(100vh - 140px);
-    padding              : 24px;
-    display              : block;
-    grid-template-columns: 2fr 1fr;
+    min-width               : 1300px;
+    margin                  : 0 auto;
+    min-height              : calc(100vh - 140px);
+    padding                 : 24px;
+    // display              : block;
+    display                 : grid;
+    grid-template-columns   : 2fr 1fr;
 }
 
 .center {
@@ -99,8 +100,8 @@ textarea {
     font-weight      : 100;
     padding          : 4px 8px;
     margin-top       : 32px;
-    grid-column-start: 2;
-    grid-column-end  : 4;
+    grid-column-start: 1;
+    grid-column-end  : -1;
 }
 
 .cardsWrap {
@@ -112,11 +113,11 @@ textarea {
 
 
 .basketWrap {
-    display              : none;
-    /*display            : grid;*/
-    grid-gap             : 12px;
-    grid-auto-rows       : max-content;
-    text-align           : center;
+    // display              : none;
+    display       : grid;
+    grid-gap      : 12px;
+    grid-auto-rows: max-content;
+    text-align    : center;
 }
 
 .result {
