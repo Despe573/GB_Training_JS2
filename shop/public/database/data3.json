@@ -1,0 +1,22 @@
+{
+    "9": {
+        "name": "Shorts",
+        "price": 450,
+        "img": "https://picsum.photos/250/250?random=9"
+    },
+    "10": {
+        "name": "Undershirt",
+        "price": 150,
+        "img": "https://picsum.photos/250/250?random=10"
+    },
+    "11": {
+        "name": "Skirt",
+        "price": 550,
+        "img": "https://picsum.photos/250/250?random=11"
+    },
+    "12": {
+        "name": "Dress",
+        "price": 950,
+        "img": "https://picsum.photos/250/250?random=12"
+    }
+}

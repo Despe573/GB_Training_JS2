@@ -1,0 +1,42 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "lesson1",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "webpack",
+    "dev": "webpack serve --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Despe573/GB_Training_JS2.git"
+  },
+  "author": "Ivan Borozinetc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Despe573/GB_Training_JS2/issues"
+  },
+  "homepage": "https://github.com/Despe573/GB_Training_JS2#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.6",
+    "vue-template-compiler": "^2.6.12",
+    "vuex": "^3.6.2",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3",
+    "yargs": "^16.2.0"
+  }
+}
