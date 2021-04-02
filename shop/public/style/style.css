@@ -51,8 +51,7 @@ header .link:hover {
   margin: 0 auto;
   min-height: calc(100vh - 140px);
   padding: 24px;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
 }

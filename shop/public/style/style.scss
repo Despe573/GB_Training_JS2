@@ -42,13 +42,13 @@ header {
 }
 
 .content {
-    min-width               : 1300px;
-    margin                  : 0 auto;
-    min-height              : calc(100vh - 140px);
-    padding                 : 24px;
-    // display              : block;
-    display                 : grid;
-    grid-template-columns   : 2fr 1fr;
+    min-width                  : 1300px;
+    margin                     : 0 auto;
+    min-height                 : calc(100vh - 140px);
+    padding                    : 24px;
+    display                    : block;
+    // display                 : grid;
+    grid-template-columns      : 2fr 1fr;
 }
 
 .center {
@@ -113,7 +113,6 @@ textarea {
 
 
 .basketWrap {
-    // display              : none;
     display       : grid;
     grid-gap      : 12px;
     grid-auto-rows: max-content;
@@ -121,14 +120,13 @@ textarea {
 }
 
 .result {
-    margin       : 0 auto;
-    // border    : 1px solid #b5b7ba;
-    padding      : 16px;
-    text-align   : center;
-    font-size    : 20px;
-    font-size    : 20px;
-    width        : 284px;
-    box-shadow   : 0 0 45px #dfdfdf;
+    margin    : 0 auto;
+    padding   : 16px;
+    text-align: center;
+    font-size : 20px;
+    font-size : 20px;
+    width     : 284px;
+    box-shadow: 0 0 45px #dfdfdf;
 }
 
 .qty {

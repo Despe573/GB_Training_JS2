@@ -12,6 +12,7 @@
 import { mapActions, mapGetters } from "vuex";
 import Button from "./button.vue";
 
+
 export default {
   components: {
     Button,
