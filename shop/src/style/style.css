@@ -73,13 +73,13 @@ header .link:hover {
       align-self: flex-end;
 }
 
-.form {
+.formWrapper {
   -webkit-box-shadow: 0 0 45px #dfdfdf;
           box-shadow: 0 0 45px #dfdfdf;
   min-width: 450px;
 }
 
-form {
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

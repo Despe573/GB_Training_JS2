@@ -63,13 +63,13 @@ header {
     align-self: flex-end;
 }
 
-.form {
+.formWrapper {
     box-shadow: 0 0 45px #dfdfdf;
     min-width : 450px;
 
 }
 
-form {
+.form {
     display       : flex;
     flex-direction: column;
     padding       : 24px;

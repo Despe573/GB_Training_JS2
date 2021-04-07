@@ -4,6 +4,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin-webpack5');
 module.exports = {
     entry: {
         shop: './shop/src/main.js',
+        loadform: './shop/src/loadform.js',
         form: './shop/src/js/form.js',
     },
     output: {

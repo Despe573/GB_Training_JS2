@@ -32,7 +32,10 @@ export default new Vuex.Store({
     },
     actions: {
         requestData({ commit }, page) {
-            fetch(`./database/data${page}.json`)
+            // fetch(`/database/data${page}.json`)
+            fetch(`/datalist/${page}`, {
+                method: 'GET',
+            })
                 .then(res => {
                     return res.json();
                 })
@@ -47,6 +50,22 @@ export default new Vuex.Store({
 
         delToCart({ commit }, data) {
             commit('delItemsToCart', data);
+        },
+
+        addItemToData({ }, data) {
+            fetch('/datalist', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(res => {
+                    return res.json();
+                })
+                .then(res => {
+                    console.log(res);
+                })
         },
     },
 });
